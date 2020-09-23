@@ -1,14 +1,14 @@
-module socketIo
+module irisORM
 
 go 1.15
 
 require (
 	github.com/BurntSushi/toml v0.3.1
-	github.com/CloudyKit/jet/v3 v3.0.0 // indirect
+	github.com/CloudyKit/jet/v3 v3.0.1 // indirect
 	github.com/Joker/hpp v1.0.0 // indirect
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.0.1-0.20200619015827-c3da72aa01ed // indirect
-	github.com/dgraph-io/badger v1.6.0 // indirect
+	github.com/dgraph-io/badger v1.6.2 // indirect
 	github.com/etcd-io/bbolt v1.3.3 // indirect
 	github.com/fasthttp-contrib/websocket v0.0.0-20160511215533-1f3b11f56072 // indirect
 	github.com/gavv/httpexpect v2.0.0+incompatible // indirect
@@ -29,7 +29,7 @@ require (
 	github.com/moul/http2curl v1.0.0 // indirect
 	github.com/onsi/ginkgo v1.14.1 // indirect
 	github.com/onsi/gomega v1.10.2 // indirect
-	github.com/ryanuber/columnize v2.1.0+incompatible // indirect
+	github.com/ryanuber/columnize v2.1.2+incompatible // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
 	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect

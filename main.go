@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"socketIo/configs"
-	"socketIo/extra"
+	"irisORM/configs"
+	"irisORM/extra"
 	"strconv"
 
 	"github.com/iris-contrib/middleware/cors"

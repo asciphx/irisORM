@@ -3,9 +3,7 @@ package dbs
 import (
 	"database/sql"
 	"fmt"
-	"socketIo/configs"
-
-	_ "github.com/go-sql-driver/mysql"
+	"irisORM/configs"
 )
 
 type (

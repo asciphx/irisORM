@@ -10,43 +10,43 @@ import (
 )
 
 const (
-	RECODEOK         = "0"
-	RECODEDBERR      = "4001"
-	RECODENODATA     = "4002"
-	RECODEDATAEXIST  = "4003"
-	RECODEDATAERR    = "4004"
-	RECODESESSIONERR = "4101"
-	RECODELOGINERR   = "4102"
-	RECODEPARAMERR   = "4103"
-	RECODEUSERERR    = "4104"
-	RECODEHASHERR    = "4105"
-	RECODEPWDERR     = "4106"
-	RECODEEXISTSERR  = "4201"
-	RECODEIPCERR     = "4202"
-	RECODETHIRDERR   = "4301"
-	RECODEIOERR      = "4302"
-	RECODESERVERERR  = "4500"
-	RECODEUNKNOWERR  = "4501"
+	RECODE_OK         = "0"
+	RECODE_DBERR      = "4001"
+	RECODE_NODATA     = "4002"
+	RECODE_DATAEXIST  = "4003"
+	RECODE_DATAERR    = "4004"
+	RECODE_SESSIONERR = "4101"
+	RECODE_LOGINERR   = "4102"
+	RECODE_PARAMERR   = "4103"
+	RECODE_USERERR    = "4104"
+	RECODE_HASHERR    = "4105"
+	RECODE_PWDERR     = "4106"
+	RECODE_EXISTSERR  = "4201"
+	RECODE_IPCERR     = "4202"
+	RECODE_THIRDERR   = "4301"
+	RECODE_IOERR      = "4302"
+	RECODE_SERVERERR  = "4500"
+	RECODE_UNKNOWERR  = "4501"
 )
 
 var recodeText = map[string]string{
-	RECODEOK:         "成功",
-	RECODEDBERR:      "数据库操作错误",
-	RECODENODATA:     "无数据",
-	RECODEDATAEXIST:  "数据已存在",
-	RECODEDATAERR:    "数据错误",
-	RECODESESSIONERR: "用户未登录",
-	RECODELOGINERR:   "用户登录失败",
-	RECODEPARAMERR:   "参数错误",
-	RECODEUSERERR:    "用户不存在或密码错误",
-	RECODEHASHERR:    "HASH错误",
-	RECODEPWDERR:     "密码错误",
-	RECODEEXISTSERR:  "重复上传错误",
-	RECODEIPCERR:     "IPC错误",
-	RECODETHIRDERR:   "与以太坊交互失败",
-	RECODEIOERR:      "文件读写错误",
-	RECODESERVERERR:  "内部错误",
-	RECODEUNKNOWERR:  "未知错误",
+	RECODE_OK:         "成功",
+	RECODE_DBERR:      "数据库操作错误",
+	RECODE_NODATA:     "无数据",
+	RECODE_DATAEXIST:  "数据已存在",
+	RECODE_DATAERR:    "数据错误",
+	RECODE_SESSIONERR: "用户未登录",
+	RECODE_LOGINERR:   "用户登录失败",
+	RECODE_PARAMERR:   "参数错误",
+	RECODE_USERERR:    "用户不存在或密码错误",
+	RECODE_HASHERR:    "HASH错误",
+	RECODE_PWDERR:     "密码错误",
+	RECODE_EXISTSERR:  "重复上传错误",
+	RECODE_IPCERR:     "IPC错误",
+	RECODE_THIRDERR:   "与以太坊交互失败",
+	RECODE_IOERR:      "文件读写错误",
+	RECODE_SERVERERR:  "内部错误",
+	RECODE_UNKNOWERR:  "未知错误",
 }
 
 func RecodeText(code string) string {
@@ -54,7 +54,7 @@ func RecodeText(code string) string {
 	if ok {
 		return str
 	}
-	return recodeText[RECODEUNKNOWERR]
+	return recodeText[RECODE_UNKNOWERR]
 }
 
 type Resp struct {

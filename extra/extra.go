@@ -2,8 +2,8 @@ package extra
 
 import (
 	"fmt"
-	"socketIo/dbs"
-	"socketIo/utils"
+	"irisORM/dbs"
+	"irisORM/utils"
 
 	"github.com/labstack/echo"
 )
@@ -12,7 +12,7 @@ import (
 func Register(c echo.Context) (err error) {
 	//1. 响应数据结构初始化
 	var resp utils.Resp
-	resp.Errno = utils.RECODEOK
+	resp.Errno = utils.RECODE_OK
 	defer utils.ResponseData(c, &resp)
 	account := &dbs.Account{}
 	sql := fmt.Sprintf("insert into account(account,pwd,name) values('%s','%s','%s')",
@@ -26,7 +26,7 @@ func Register(c echo.Context) (err error) {
 	_, err = dbs.Create(sql)
 	if err != nil {
 		fmt.Println("failed to get session")
-		resp.Errno = utils.RECODESESSIONERR
+		resp.Errno = utils.RECODE_SESSIONERR
 		return err
 	}
 	return nil

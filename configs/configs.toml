@@ -3,5 +3,3 @@ port = ":8888"
 [db]
 driver  = "mysql"
 connstr = "root@tcp(127.0.0.1:3306)/iris?charset=utf8mb4"
-[eth]
-keydir = "D:/tar.gz/gen/data/keystore"
