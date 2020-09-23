@@ -12,7 +12,14 @@ import (
 
 func main() {
 	fmt.Printf("get config %v ,%v\n", configs.Config.Common.Port, configs.Config.Db.Connstr)
-	app := iris.Default()
+	// 注册模板在work目录的views文件夹
+	app := iris.New()
+	app.RegisterView(iris.HTML("./view", ".html"))
+	app.Get("/", func(ctx iris.Context) {
+		ctx.ViewData("message", "Hello world!")
+		ctx.View("old.html")
+	})
+
 	crs := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"}, // allows everything, use that to change the hosts.
 		AllowCredentials: true,

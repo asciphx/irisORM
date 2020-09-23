@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"irisORM/configs"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 type (
